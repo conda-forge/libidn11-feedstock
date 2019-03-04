@@ -36,7 +36,7 @@ if [ -n "$VS_MAJOR" ] ; then
     export LDFLAGS="$LDFLAGS -L$platlibs"
     export CONFIGURE_FLAGS="--with-sysroot=$PREFIX"
 else
-    ./autoreconf -vfi
+    autoreconf -vfi
 fi
 
 ./configure \
