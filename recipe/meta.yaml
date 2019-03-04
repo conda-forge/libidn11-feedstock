@@ -25,6 +25,8 @@ requirements:
     - {{ compiler('c') }}        # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - make                       # [unix]
+    - automake                   # [unix]
+    - libtool                    # [unix]
   host:
     - libiconv
   run:
