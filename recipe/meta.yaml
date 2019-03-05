@@ -27,6 +27,7 @@ requirements:
     - make                       # [unix]
     - automake                   # [unix]
     - libtool                    # [unix]
+    - gettext                    # [unix]
   host:
     - libiconv
   run:
