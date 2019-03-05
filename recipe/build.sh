@@ -34,12 +34,15 @@ if [ -n "$VS_MAJOR" ] ; then
     # msys2 stub libraries for ws2_32.
     platlibs=$(cd $(dirname $(gcc --print-prog-name=ld))/../lib && pwd -W)
     export LDFLAGS="$LDFLAGS -L$platlibs"
+    export CONFIGURE_FLAGS="--with-sysroot=$PREFIX"
+else
+    autoreconf -vfi
 fi
 
 ./configure \
     --prefix=$PREFIX \
-    --with-sysroot=$PREFIX \
     --disable-dependency-tracking \
+    $CONFIGURE_FLAGS \
     --disable-gtk-doc-html
 
 make -j$CPU_COUNT
