@@ -1,7 +1,7 @@
 {% set name = "libidn" %}
 {% set soversion = "11" %}
-{% set version = "1.34" %}
-{% set sha256 = "3719e2975f2fb28605df3479c380af2cf4ab4e919e1506527e4c7670afff6e3c" %}
+{% set version = "1.36" %}
+{% set sha256 = "14b67108344d81ba844631640df77c9071d9fb0659b080326ff5424e86b14038" %}
 {% set am_version = "1.15" %} # keep synchronized with build.sh
 
 package:
@@ -42,7 +42,7 @@ about:
   license: LGPLv3
   license_family: GPL
   license_file: COPYING.LESSERv3
-  summary: "Library for internationalized domain name support"
+  summary: Library for internationalized domain name support
   description: |
     Libidn is a package for internationalized string handling based on the
     Stringprep, Punycode, IDNA and TLD specifications.  Libidn is a GNU
