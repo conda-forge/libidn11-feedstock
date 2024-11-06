@@ -46,6 +46,8 @@ fi
     --disable-gtk-doc-html
 
 make -j$CPU_COUNT
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 make check -j$CPU_COUNT
+fi
 make install
 
